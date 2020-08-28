@@ -1,0 +1,12 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default() {
+  return "woodenFactory = new WoodenDoorFactory()" + "door = woodenFactory.makeDoor()" + "expert = woodenFactory.makeFittingExpert()" + "door.getDescription()  // Output: I am a wooden door" + "expert.getDescription() // Output: I can only fit wooden doors" + "// Same for Iron Factory" + "ironFactory = new IronDoorFactory()" + "door = ironFactory.makeDoor()" + "expert = ironFactory.makeFittingExpert()" + "door.getDescription()  // Output: I am an iron door" + "expert.getDescription() // Output: I can only fit iron doors`";
+};
+
+exports.default = _default;
