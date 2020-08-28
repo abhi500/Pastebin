@@ -40,18 +40,19 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: scroll;
 }
 
 .app__navbar{
   flex: auto;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .app__main{
   flex: 100%;
-  margin-left: 20%;
-  overflow: scroll;
+  margin: auto;
 }
 
 </style>

@@ -28,7 +28,7 @@ export default {
 .container{
     
     &--size{
-        width: 70%;
+        width: 1200px;
         height: 100vh;
     }
 

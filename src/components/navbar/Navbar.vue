@@ -1,9 +1,13 @@
 <template>
     <nav class="navbar navbar--theme navbar--size">
         <div class="navbar__container navbar__container--size">
+            <div class="navbar__left">
+                <a href="/" class="navbar__title">Pastebin</a>
+            </div>
             <div class="navbar__right">
-                <sign-in></sign-in>
-                <sign-up></sign-up>
+                {{ currentRoute  }}
+                <sign-in v-if="getCurrentRoute != `SignIn`"></sign-in>
+                <sign-up v-if="getCurrentRoute != `SignUp`"></sign-up>
             </div>       
         </div>
     </nav>
@@ -18,7 +22,20 @@ export default {
     components: {
         'sign-in' :SignIn,
         'sign-up' :SignUp
-    }
+    },
+
+    data() {
+        return {
+            currentRoute: ''
+        }
+    },
+
+    computed: {
+        //return current route name
+        getCurrentRoute(){
+            return this.$route.name;
+        }
+    },
 }
 </script>
 
@@ -38,11 +55,19 @@ export default {
     &__container{
         margin: auto;
         display: flex;
+        align-items: center;
 
         &--size{
             width: 60%;
             height: 100%;
         }
+    }
+
+    &__title{
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+        text-decoration: none;
     }
 
     &__right{
